@@ -1,3 +1,9 @@
+/*
+*  angular-scroll v1.0.0
+*  Scrolling the Angular way
+*  Copyright 2015 Pavel Gavrilenko
+*  Examples and docs: https://github.com/gavr-pavel/angular-scroll
+*/
 (function () {
 
     'use strict';
