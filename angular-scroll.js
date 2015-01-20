@@ -4,7 +4,7 @@
 *  Copyright 2015 Pavel Gavrilenko
 *  Examples and docs: https://github.com/gavr-pavel/angular-scroll
 */
-(function () {
+;(function () {
 
     'use strict';
 
