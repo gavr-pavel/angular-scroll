@@ -1,0 +1,24 @@
+{
+  "name": "angular-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gavr-pavel/angular-scroll.git"
+  },
+  "author": "Pavel Gavrilenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gavr-pavel/angular-scroll/issues"
+  },
+  "homepage": "https://github.com/gavr-pavel/angular-scroll",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "gulp-uglifyjs": "^0.5.0"
+  }
+}

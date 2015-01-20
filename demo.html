@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+            }
+            button {
+                background: #fff;
+                border: 0;
+                margin: 0;
+                padding: 10px 15px;
+                border-radius: 3px;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+                cursor: pointer;
+            }
+            .block {
+                padding: 0 30px;
+                min-height: 100%;
+                overflow: hidden;
+                color: #fff;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            .block:nth-of-type(1) {
+                background: #1abc9c;
+            }
+            .joint:nth-child(2) {
+                height: 100%;
+                background: linear-gradient(#1abc9c, #2ecc71);
+            }
+            .block:nth-of-type(3) {
+                background: #2ecc71;
+            }
+            .joint:nth-child(4) {
+                height: 100%;
+                background: linear-gradient(#2ecc71, #3498db);
+            }
+            .block:nth-of-type(5) {
+                background: #3498db;
+            }
+                .block h1 {
+                    margin: 75px 0;
+                }
+                .block p {
+                    max-width: 960px;
+                    margin: 25px auto;
+                    font-size: 20px;
+                    font-weight: 100;
+                    line-height: 1.5;
+                }
+            .inner-demo {
+                width: 50%;
+                height: 350px;
+                margin: 50px auto 0;
+                border: 1px solid #ecf0f1;
+                overflow: auto;
+            }
+            .inner-demo-block {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+                .inner-demo-block:nth-child(1) {
+                    background: #16a085;
+                }
+                .inner-demo-block:nth-child(2) {
+                    background: #27ae60;
+                }
+                .inner-demo-block:nth-child(3) {
+                    position: relative;
+                    left: 100%;
+                    top: -100%;
+                    background: #2980b9;
+                }
+            .code-block {
+                max-width: 960px;
+                margin: 25px auto 50px;
+                text-align: left;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+        <script src="./angular-scroll.js"></script>
+        <script>
+            angular
+                .module('demo', ['scroll'])
+
+                .controller('Page', ['$scope', function ($scope) {
+
+                }]);
+        </script>
+    </head>
+    <body ng-app="demo" ng-controller="Page" scroll-root>
+        <div class="block" scroll-item="turquoise">
+            <h1>Block 1</h1>
+            <p><b>angular-scroll</b> module provides <b>scroll</b> service and combination of <b>scroll-root</b> and <b>scroll-item</b> directives.</p>
+            <p>Example of <b>scroll-root</b> and <b>scroll-item</b> directives usage:</p>
+            <div class="code-block">
+                <script src="https://gist.github.com/gavr-pavel/b6ecb02b563220cf3227.js"></script>
+            </div>
+            <button ng-click="scrollTo('emerald')">Move to the next block</button>
+        </div>
+        <div class="joint"></div>
+        <div class="block" scroll-item="emerald">
+            <h1>Block 2</h1>
+            <p>Example of <b>scroll</b> service usage:</p>
+            <div class="code-block">
+                <script src="https://gist.github.com/gavr-pavel/7a6d9aa869d20e7712fc.js"></script>
+            </div>
+            <button ng-click="scrollTo('peter river')">Move to the next block</button>
+        </div>
+        <div class="joint"></div>
+        <div class="block" scroll-item="peter river">
+            <h1>Block 3</h1>
+            <p>Also <b>angular-scroll</b> works good with nested scrollable elements.</p>
+            <div class="inner-demo" scroll-root>
+                <div class="inner-demo-block" scroll-item="1">
+                    <h1>1</h1>
+                    <button ng-click="scrollTo('two')">Go to 2</button>
+                    <button ng-click="scrollTo('three :)')">Go to 3</button>
+                </div>
+                <div class="inner-demo-block" scroll-item="two">
+                    <h1>2</h1>
+                    <button ng-click="scrollTo('1')">Go to 1</button>
+                    <button ng-click="scrollTo('three :)')">Go to 3</button>
+                </div>
+                <div class="inner-demo-block" scroll-item="three :)">
+                    <h1>3</h1>
+                    <button ng-click="scrollTo('1')">Go to 1</button>
+                    <button ng-click="scrollTo('two')">Go to 2</button>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/gavr-pavel/angular-scroll"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+    </body>
+</html>
