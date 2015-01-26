@@ -54,3 +54,6 @@ scroll(someElement)
 //     so you can omit them:
 scroll(someElement).to(someInnerElement);
 ```
+
+## Browser support
+*angular-scroll* uses `requestAnimationFrame`, so if you want it working in [old browsers](http://caniuse.com/#feat=requestanimationframe) you should use a polyfill. I'd recommend [that one](https://gist.github.com/paulirish/1579671).
