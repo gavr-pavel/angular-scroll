@@ -5,6 +5,11 @@ Scrolling the Angular way
 
 ## Usage
 
+First, you have to include the module in your app:
+```javascript
+var app = angular.module('App', ['duScroll']);
+```
+
 ##### scroll-root and scroll-item directives
 ```html
 <!--
