@@ -1,13 +1,14 @@
 # angular-scroll
-Scrolling the Angular way
+Scrolling the Angular way.
+The only dependency is [Angular](https://github.com/angular/angular.js).
 
-## [Demo](http://gavr-pavel.github.io/angular-scroll/demo.html)
+## [Demo](https://gavr-pavel.github.io/angular-scroll/demo.html)
 
 ## Usage
 
 First, you have to include the module in your app:
 ```javascript
-var app = angular.module('App', ['duScroll']);
+var app = angular.module('YourModule', ['scroll']);
 ```
 
 ##### scroll-root and scroll-item directives
@@ -45,16 +46,16 @@ scroll({
     callback: function () {/* ... */} // The callback is called
                                       //     after the animation has been ended
 });
- 
- 
+
+
 // OR
- 
- 
+
+
 scroll(someElement)
     .to(someInnerElement)
     .in(700)
     .then(function () {/* ... */});
- 
+
 // Duration and callback arguments are optional
 //     so you can omit them:
 scroll(someElement).to(someInnerElement);
