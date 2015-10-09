@@ -1,5 +1,6 @@
 # angular-scroll
 Scrolling the Angular way.
+
 The only dependency is [Angular](https://github.com/angular/angular.js).
 
 ## [Demo](https://gavr-pavel.github.io/angular-scroll/demo.html)
